@@ -1,0 +1,79 @@
+:root{
+  --bg:#07070a;
+  --card:#0f1016cc;
+  --text:#f5f5f7;
+  --muted:#b8b8c2;
+  --glow: 0 0 18px rgba(255, 40, 90, .22);
+  --accent1:#ff285a;
+  --accent2:#7f2cff;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; background: radial-gradient(1200px 900px at 20% -10%, rgba(127,44,255,.25), transparent 60%),
+                                  radial-gradient(900px 700px at 90% 10%, rgba(255,40,90,.20), transparent 55%),
+                                  var(--bg);
+          color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+#app{max-width:520px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column;}
+.topbar{
+  position:sticky; top:0; z-index:5;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 14px 10px;
+  background: linear-gradient(to bottom, rgba(7,7,10,.92), rgba(7,7,10,.55));
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.brand{display:flex; gap:10px; align-items:center;}
+.logo{
+  width:38px; height:38px; border-radius:14px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent1));
+  box-shadow: var(--glow);
+}
+.title .name{font-weight:800; letter-spacing:.2px}
+.title .tagline{font-size:12px; color:var(--muted)}
+.iconbtn{
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color:var(--text);
+  border-radius:14px;
+  padding:10px 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
+.screen{padding:14px; flex:1;}
+.card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+}
+.cardGlow{box-shadow: var(--glow), 0 16px 40px rgba(0,0,0,.35);}
+.hero{
+  border-radius: 24px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background: linear-gradient(135deg, rgba(127,44,255,.18), rgba(255,40,90,.12));
+  box-shadow: var(--glow);
+}
+.hero h1{margin:0 0 8px; font-size:22px}
+.hero p{margin:0 0 12px; color:var(--muted); line-height:1.35}
+.row{display:flex; gap:10px; flex-wrap:wrap}
+.btn{border:none; border-radius: 16px; padding:12px 14px; font-weight:700; cursor:pointer;}
+.btn.primary{background: linear-gradient(135deg, var(--accent2), var(--accent1)); color:#fff; box-shadow: var(--glow);}
+.btn.ghost{background: rgba(255,255,255,.05); color:var(--text); border:1px solid rgba(255,255,255,.12);}
+.grid{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-top:12px;}
+.tile{position:relative; border-radius: 18px; overflow:hidden; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); min-height:140px;}
+.tile img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05);}
+.badge{position:absolute; top:10px; left:10px; font-size:11px; font-weight:800; padding:6px 10px; border-radius:999px; background: rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.10);}
+.badge.hot{background: rgba(255,40,90,.20); border-color: rgba(255,40,90,.35)}
+.badge.lock{left:auto; right:10px; background: rgba(0,0,0,.65)}
+.caption{position:absolute; bottom:0; left:0; right:0; padding:10px; background: linear-gradient(to top, rgba(0,0,0,.72), transparent); font-weight:700;}
+.bottombar{position:sticky; bottom:0; display:flex; justify-content:space-around; padding:10px; background: rgba(7,7,10,.92); border-top:1px solid rgba(255,255,255,.06);}
+.tab{width:56px; height:44px; border-radius:16px; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); color:var(--text); font-size:16px;}
+.tab.active{box-shadow: var(--glow); border-color: rgba(255,40,90,.25);}
+.modal{position:fixed; inset:0; z-index:50; background: rgba(0,0,0,.62); display:flex; align-items:flex-end; justify-content:center; padding:16px;}
+.modal.hidden{display:none}
+.modalCard{width:100%; max-width:520px; border-radius:24px; padding:16px; border:1px solid rgba(255,255,255,.10); background: rgba(15,16,22,.92); backdrop-filter: blur(12px); box-shadow: var(--glow);}
+.modalTitle{font-size:18px; font-weight:900}
+.modalText{color:var(--muted); margin:8px 0 14px}
+.modalActions{display:flex; gap:10px; justify-content:flex-end}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SensuTV</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="title">
+          <div class="name">SensuTV</div>
+          <div class="tagline" id="tagline">FREE • previews calientes</div>
+        </div>
+      </div>
+      <button class="iconbtn" id="menuBtn">☰</button>
+    </header>
+
+    <main class="screen" id="screen"></main>
+
+    <nav class="bottombar">
+      <button class="tab active" data-tab="home">🔥</button>
+      <button class="tab" data-tab="free">FREE</button>
+      <button class="tab" data-tab="premium">💎</button>
+      <button class="tab" data-tab="account">👤</button>
+    </nav>
+  </div>
+
+  <div class="modal hidden" id="modal">
+    <div class="modalCard">
+      <div class="modalTitle" id="modalTitle">Desbloquear</div>
+      <div class="modalText" id="modalText">Acceso completo 30 días</div>
+      <div class="modalActions">
+        <button class="btn ghost" id="closeModal">Ahora no</button>
+        <button class="btn primary" id="goPay">🔥 Unirme Premium</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/ui.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
